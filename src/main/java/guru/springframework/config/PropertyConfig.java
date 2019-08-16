@@ -18,7 +18,7 @@ public class PropertyConfig {
     @Value("${guru.password}")
     String password;
 
-    @Value("${guru.dburl}")
+    @Value("${guru.dburl}zrfsdcerfsdzrfsfeecdsfdc")
     String url;
 
     @Value("${guru.jms.username}")
