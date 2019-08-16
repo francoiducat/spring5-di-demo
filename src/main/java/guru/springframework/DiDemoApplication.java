@@ -11,11 +11,12 @@ public class DiDemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
-
-		MyController controller = (MyController) ctx.getBean("myController");
-
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
-
 		System.out.println(fakeDataSource.getUser());
+
+		ApplicationContext applicationContext = SpringApplication.run(DiDemoApplication.class, args);
+		MyController myController = (MyController) applicationContext.getBean("myController");
+		myController.hello();
+
 	}
 }
